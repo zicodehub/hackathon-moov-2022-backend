@@ -13,6 +13,9 @@
   "attributes": {
     "value": {
       "type": "json"
+    },
+    "question": {
+      "model": "question"
     }
   }
 }

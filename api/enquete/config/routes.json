@@ -5,7 +5,7 @@
       "path": "/enquetes",
       "handler": "enquete.find",
       "config": {
-        "policies": ["strapi.config.policies.is_moov"]
+        "policies": ["global::is_moov"]
       }
     },
     {

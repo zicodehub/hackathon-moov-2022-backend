@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "interactions",
+  "info": {
+    "name": "interaction",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type_interaction": {
+      "type": "string"
+    },
+    "services": {
+      "collection": "service"
+    }
+  }
+}

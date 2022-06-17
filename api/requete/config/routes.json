@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/requetes",
+      "handler": "requete.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/requetes/count",
+      "handler": "requete.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/requetes/:id",
+      "handler": "requete.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/requetes",
+      "handler": "requete.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/requetes/:id",
+      "handler": "requete.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/requetes/:id",
+      "handler": "requete.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

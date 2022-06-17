@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enquetes",
+  "info": {
+    "name": "enquete"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type_enquete": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "libelle": {
+      "type": "string"
+    },
+    "questions": {
+      "via": "enquete",
+      "collection": "question"
+    }
+  }
+}

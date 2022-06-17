@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "identifications",
+  "info": {
+    "name": "identification"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero_telephone": {
+      "type": "string"
+    },
+    "telephone_secondaire": {
+      "type": "string"
+    },
+    "image_cni": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "photo_requerent": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "client": {
+      "model": "client"
+    }
+  }
+}

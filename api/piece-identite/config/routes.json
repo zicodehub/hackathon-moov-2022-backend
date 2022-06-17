@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/piece-identites",
+      "handler": "piece-identite.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/piece-identites/count",
+      "handler": "piece-identite.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/piece-identites/:id",
+      "handler": "piece-identite.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/piece-identites",
+      "handler": "piece-identite.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/piece-identites/:id",
+      "handler": "piece-identite.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/piece-identites/:id",
+      "handler": "piece-identite.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

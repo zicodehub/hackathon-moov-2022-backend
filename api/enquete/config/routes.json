@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/enquetes",
+      "handler": "enquete.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/enquetes/count",
+      "handler": "enquete.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/enquetes/:id",
+      "handler": "enquete.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/enquetes",
+      "handler": "enquete.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/enquetes/:id",
+      "handler": "enquete.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/enquetes/:id",
+      "handler": "enquete.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

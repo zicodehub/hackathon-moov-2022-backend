@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "installations",
+  "info": {
+    "name": "installation",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date_installation": {
+      "type": "date"
+    },
+    "date_desinstallation": {
+      "type": "date"
+    },
+    "client": {
+      "model": "client"
+    },
+    "est_installe": {
+      "type": "boolean"
+    }
+  }
+}

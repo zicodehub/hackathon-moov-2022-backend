@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "requetes",
+  "info": {
+    "name": "requete"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string"
+    },
+    "type_requete": {
+      "type": "string"
+    },
+    "is_resolved": {
+      "type": "boolean"
+    },
+    "client": {
+      "model": "client"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/terminals",
+      "handler": "terminal.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/terminals/count",
+      "handler": "terminal.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/terminals/:id",
+      "handler": "terminal.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/terminals",
+      "handler": "terminal.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/terminals/:id",
+      "handler": "terminal.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/terminals/:id",
+      "handler": "terminal.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

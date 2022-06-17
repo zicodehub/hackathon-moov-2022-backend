@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reponse_identifications",
+  "info": {
+    "name": "reponse_identification",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "libelle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "identification": {
+      "model": "identification"
+    }
+  }
+}

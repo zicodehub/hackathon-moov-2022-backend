@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "terminals",
+  "info": {
+    "name": "terminal"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "marque": {
+      "type": "string"
+    },
+    "modele": {
+      "type": "string"
+    },
+    "type_os": {
+      "type": "string"
+    }
+  }
+}

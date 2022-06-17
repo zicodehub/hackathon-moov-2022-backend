@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "name": "client",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "prenom": {
+      "type": "string"
+    },
+    "lieu_naissance": {
+      "type": "string"
+    },
+    "civilite": {
+      "type": "string"
+    },
+    "adresse": {
+      "type": "string"
+    },
+    "profession": {
+      "type": "string"
+    },
+    "date_naissance": {
+      "type": "date"
+    },
+    "admin_user": {
+      "plugin": "admin",
+      "model": "user"
+    },
+    "piece_identite": {
+      "model": "piece-identite"
+    },
+    "nationalite": {
+      "type": "string"
+    }
+  }
+}

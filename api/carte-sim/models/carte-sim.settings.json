@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carte_sims",
+  "info": {
+    "name": "carte_SIM"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "msisdn": {
+      "type": "biginteger"
+    },
+    "iccid": {
+      "type": "biginteger"
+    },
+    "client": {
+      "model": "client"
+    }
+  }
+}

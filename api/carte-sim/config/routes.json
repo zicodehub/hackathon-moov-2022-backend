@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/carte-sims",
+      "handler": "carte-sim.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/carte-sims/count",
+      "handler": "carte-sim.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/carte-sims/:id",
+      "handler": "carte-sim.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/carte-sims",
+      "handler": "carte-sim.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/carte-sims/:id",
+      "handler": "carte-sim.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/carte-sims/:id",
+      "handler": "carte-sim.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

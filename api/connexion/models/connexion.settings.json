@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "connexions",
+  "info": {
+    "name": "connexion"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "is_connected": {
+      "type": "boolean"
+    },
+    "clients": {
+      "collection": "client"
+    }
+  }
+}

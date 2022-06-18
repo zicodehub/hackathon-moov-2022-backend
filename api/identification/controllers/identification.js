@@ -28,13 +28,15 @@ module.exports = {
         let created_piece = await  strapi.services.client.create({ 
             type_piece, numero_piece, lieu_delivrance, date_emission, date_expiration 
         })
-
         
+        
+        console.log("Le client ")
         let created_client = await strapi.services.client.create({
             nom, prenom, lieu_naissance, date_naissance, civilite, adresse, profession, nationalite, 
             piece_identite: created_piece.id
         }) 
         
+        console.log("La sSIM")
         let created_sim = await strapi.serviceS['carte-sim'].create({
             numero, msisdn, client: created_client.id
         })

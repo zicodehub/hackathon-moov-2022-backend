@@ -42,6 +42,10 @@
     },
     "nationalite": {
       "type": "string"
+    },
+    "remplacements": {
+      "via": "client",
+      "collection": "remplacement"
     }
   }
 }

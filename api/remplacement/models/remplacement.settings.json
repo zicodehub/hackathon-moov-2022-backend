@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "remplacements",
+  "info": {
+    "name": "remplacement"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ancien_iccid": {
+      "type": "string"
+    },
+    "nouveau_iccid": {
+      "type": "string"
+    },
+    "motif": {
+      "type": "richtext"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "approved",
+        "rejected",
+        "waiting"
+      ]
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "client": {
+      "model": "client",
+      "via": "remplacements"
+    },
+    "piece_identite": {
+      "model": "piece-identite"
+    }
+  }
+}

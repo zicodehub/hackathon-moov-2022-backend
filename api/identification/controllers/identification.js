@@ -12,6 +12,11 @@ module.exports = {
     console.log("C'est moi")
     if (ctx.is('multipart')) {
       const { data, files } = parseMultipartData(ctx);
+      const { client, prenom, lieu_naissance, civilite, adresse, profession, date_naissance, nationalite } = data
+      client = await strapi.services.client.create({
+        client, prenom, lieu_naissance, civilite, adresse, profession, date_naissance, nationalite, 
+      }) 
+      
       entity = await strapi.services.identification.create(data, { files });
     } else {
       entity = await strapi.services.identification.create(ctx.request.body);

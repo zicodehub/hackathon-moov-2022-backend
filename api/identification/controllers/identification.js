@@ -38,7 +38,7 @@ module.exports = {
         
         console.log("La sSIM", created_client)
         let created_sim = await strapi.services['carte-sim'].create({
-            numero, msisdn, client: created_client
+            numero, msisdn,
         })
        
       entity = await strapi.services.identification.create(ctx.request.body);

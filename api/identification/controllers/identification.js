@@ -33,13 +33,13 @@ module.exports = {
         console.log("Le client ", nom, prenom, lieu_naissance, date_naissance, civilite, adresse, profession, nationalite)
         let created_client = await strapi.services.client.create({
             nom, prenom, lieu_naissance, civilite, adresse, profession, nationalite, 
-            piece_identite: created_piece.id
+            piece_identite: created_piece.id, numero, msisdn,
         }) 
         
-        console.log("La sSIM", created_client)
-        let created_sim = await strapi.services['carte-sim'].create({
-            numero, msisdn,
-        })
+        // console.log("La sSIM", created_client)
+        // let created_sim = await strapi.services['carte-sim'].create({
+        //     numero, msisdn,
+        // })
        
       entity = await strapi.services.identification.create(ctx.request.body);
     }

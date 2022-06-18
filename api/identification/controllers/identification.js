@@ -19,9 +19,9 @@ module.exports = {
       
       entity = await strapi.services.identification.create(data, { files });
     } else {
-        const { client, prenom, lieu_naissance, civilite, adresse, profession, date_naissance, nationalite } = ctx.request.body
+        const { client, prenom, lieu_naissance, civilite, adresse, profession, nationalite } = ctx.request.body
         client = await strapi.services.client.create({
-          client, prenom, lieu_naissance, civilite, adresse, profession, date_naissance, nationalite, 
+          client, prenom, lieu_naissance, civilite, adresse, profession, nationalite, 
         }) 
       entity = await strapi.services.identification.create(ctx.request.body);
     }

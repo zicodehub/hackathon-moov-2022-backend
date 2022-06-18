@@ -32,7 +32,7 @@ module.exports = {
         
         let created_client = await strapi.services.client.create({
             nom, prenom, lieu_naissance, date_naissance, civilite, adresse, profession, nationalite, 
-            piece_identite: created_client.id
+            piece_identite: created_piece.id
         }) 
         
         let created_sim = await strapi.serviceS['carte-sim'].create({

@@ -5,7 +5,7 @@
       "path": "/identifications",
       "handler": "identification.zoma",
       "config": {
-        "policies": ["global::client.is_moov"]
+        "policies": ["global::is_moov"]
       }
     },
     {

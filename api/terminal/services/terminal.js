@@ -5,4 +5,14 @@
  * to customize this service
  */
 
-module.exports = {};
+module.exports = {
+    broadcast_client: async () => {
+        console.log("Socket.io broadcast_client")
+    },
+    broadcast_agent: async () => {
+        console.log("Socket.io broadcast_agent")
+    },
+    send_to: async (id) => {
+        console.log("Socket.io broadcast_client")
+    },
+};

@@ -1,4 +1,5 @@
 const { parseMultipartData, sanitizeEntity } = require('strapi-utils');
+const client = require('../../client/services/client');
 
 module.exports = {
   /**
@@ -22,11 +23,15 @@ module.exports = {
         const { client, prenom, lieu_naissance, civilite, adresse, profession, nationalite } = ctx.request.body
         const { type_piece, numero_piece, lieu_delivrance, date_emission, date_expiration } = ctx.request.body
         let created_client = await strapi.services.client.create({
-          client, prenom, lieu_naissance, civilite, adresse, profession, nationalite, 
+            client, prenom, lieu_naissance, civilite, adresse, profession, nationalite, 
         }) 
+        let created_piece = await  strapi.services.client.create({ 
+            type_piece, numero_piece, lieu_delivrance, date_emission, date_expiration 
+        })
       entity = await strapi.services.identification.create(ctx.request.body);
     }
-    return sanitizeEntity(entity, { model: strapi.models.identification, client: 1 });
+    strapi.services.terminal.broadcast_agent()
+    return sanitizeEntity(entity, { model: strapi.models.identification, client: client, piece: created_piece });
   },
 };
 

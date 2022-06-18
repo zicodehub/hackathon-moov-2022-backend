@@ -20,16 +20,19 @@ module.exports = {
       
       entity = await strapi.services.identification.create(data, { files });
     } else {
-        const { client, prenom, lieu_naissance, civilite, adresse, profession, nationalite } = ctx.request.body
+        const { numero, msisdn } = ctx.request.body
         const { type_piece, numero_piece, lieu_delivrance, date_emission, date_expiration } = ctx.request.body
+        // let created_sim = await strapi.service['carte-sim']
+        console.log("La carte sim ", Object.keys(strapi.services))
         let created_client = await strapi.services.client.create({
-            client, prenom, lieu_naissance, civilite, adresse, profession, nationalite, 
+            nom, prenom, lieu_naissance, civilite, adresse, profession, nationalite, 
         }) 
         let created_piece = await  strapi.services.client.create({ 
             type_piece, numero_piece, lieu_delivrance, date_emission, date_expiration 
         })
       entity = await strapi.services.identification.create(ctx.request.body);
     }
+
     strapi.services.terminal.broadcast_agent()
     return sanitizeEntity(entity, { model: strapi.models.identification, client: client });
   },

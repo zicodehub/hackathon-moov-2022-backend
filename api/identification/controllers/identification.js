@@ -5,4 +5,10 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+    create: async (params) => {
+        return {
+            "ok": "yes"
+        }
+    }
+};

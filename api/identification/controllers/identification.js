@@ -30,7 +30,7 @@ module.exports = {
         })
         
         
-        console.log("Le client ")
+        console.log("Le client ", nom, prenom, lieu_naissance, date_naissance, civilite, adresse, profession, nationalite)
         let created_client = await strapi.services.client.create({
             nom, prenom, lieu_naissance, date_naissance, civilite, adresse, profession, nationalite, 
             piece_identite: created_piece.id

@@ -3,7 +3,7 @@
     {
       "method": "GET",
       "path": "/identifications",
-      "handler": "identification.zoma",
+      "handler": "identification.find",
       "config": {
         "policies": ["global::is_moov"]
       }
@@ -27,7 +27,7 @@
     {
       "method": "POST",
       "path": "/identifications",
-      "handler": "identification.create",
+      "handler": "identification.createMany",
       "config": {
         "policies": []
       }

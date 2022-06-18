@@ -7,7 +7,7 @@ module.exports = {
    * @return {Object}
    */
 
-  zoma: async (ctx) => {
+   createMany: async (ctx) => {
     let entity;
     console.log("C'est moi")
     if (ctx.is('multipart')) {

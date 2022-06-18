@@ -22,7 +22,7 @@ module.exports = {
     } else {
         const { numero, msisdn } = ctx.request.body
         const { type_piece, numero_piece, lieu_delivrance, date_emission, date_expiration } = ctx.request.body
-        const { nom, prenom, lieu_naissance, civilite, adresse, profession, date_naissance, nationalite } = data
+        const { nom, prenom, lieu_naissance, civilite, adresse, profession, date_naissance, nationalite } = ctx.request.body
         
         console.log("La carte sim ", Object.keys(strapi.services))
         let created_piece = await  strapi.services.client.create({ 

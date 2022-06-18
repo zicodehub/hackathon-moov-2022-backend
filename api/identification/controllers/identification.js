@@ -7,6 +7,7 @@
 
 module.exports = {
     create: async (params) => {
+        console.log(params)
         return {
             "ok": "yes"
         }

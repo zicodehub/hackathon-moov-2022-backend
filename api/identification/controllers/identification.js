@@ -9,6 +9,7 @@ module.exports = {
 
   zoma: async (ctx) => {
     let entity;
+    console.log("C'est moi")
     if (ctx.is('multipart')) {
       const { data, files } = parseMultipartData(ctx);
       entity = await strapi.services.restaurant.create(data, { files });

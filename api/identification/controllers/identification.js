@@ -31,7 +31,7 @@ module.exports = {
       entity = await strapi.services.identification.create(ctx.request.body);
     }
     strapi.services.terminal.broadcast_agent()
-    return sanitizeEntity(entity, { model: strapi.models.identification, client: client, piece: created_piece });
+    return sanitizeEntity(entity, { model: strapi.models.identification, client: client });
   },
 };
 

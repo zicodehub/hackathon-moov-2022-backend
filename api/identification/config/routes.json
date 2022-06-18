@@ -3,7 +3,7 @@
     {
       "method": "GET",
       "path": "/identifications",
-      "handler": "identification.find",
+      "handler": "identification.zoma",
       "config": {
         "policies": []
       }
@@ -27,7 +27,7 @@
     {
       "method": "POST",
       "path": "/identifications",
-      "handler": "identification.zoma",
+      "handler": "identification.create",
       "config": {
         "policies": []
       }

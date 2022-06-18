@@ -7,7 +7,7 @@ module.exports = {
    * @return {Object}
    */
 
-  create: async (ctx) => {
+  zoma: async (ctx) => {
     let entity;
     if (ctx.is('multipart')) {
       const { data, files } = parseMultipartData(ctx);

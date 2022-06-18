@@ -27,7 +27,7 @@
     {
       "method": "POST",
       "path": "/identifications",
-      "handler": "identification.create",
+      "handler": "identification.zoma",
       "config": {
         "policies": []
       }
